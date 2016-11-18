@@ -6,7 +6,7 @@ from wtforms import SubmitField
 from payless import get_data
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'ohThai3voZa1oor1fieKufuCeow5teKei6eevu9Op8nei0Ie'
+app.config['SECRET_KEY'] = 'KEY'
 
 manager = Manager(app)
 bootstrap = Bootstrap(app)
