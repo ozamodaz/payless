@@ -24,7 +24,7 @@ def get_data(force_refresh=False):
         for provider in parsers.lst:
             data[provider.__name__] = provider()
         sets = (set(data[provider].keys()) for provider in data)
-        all_domains = set.union(*sets)
+        all_domains = set.intersection(*sets)
         data['ua101domain'] = parsers.ua101domain(all_domains)
         db['data'] = data
         db['order'], db['cmp_domains'], db['cmp_result'] = sort_providers(data)
