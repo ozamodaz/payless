@@ -1,9 +1,9 @@
 from grab import Grab
+g = Grab()
 
 
 def ukraine_com_ua():
     prices = {}
-    g = Grab()
     g.go('http://www.ukraine.com.ua/domains/')
     for i in range(1000):
         try:

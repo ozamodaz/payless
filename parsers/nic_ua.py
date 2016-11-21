@@ -1,9 +1,9 @@
 from grab import Grab
+g = Grab()
 
 
 def nic_ua():
     prices = {}
-    g = Grab()
     g.go('http://nic.ua/ukr/tariffs.html')
     repl = (
            (',', '.'),  # swich separator for float() conversion

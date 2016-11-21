@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, url_for, flash
 from flask_script import Manager
 from flask_bootstrap import Bootstrap
-from flask_wtf import Form
+from flask_wtf import FlaskForm
 from wtforms import SubmitField
 from payless import get_data
 from threading import Thread
@@ -13,7 +13,7 @@ manager = Manager(app)
 bootstrap = Bootstrap(app)
 
 
-class MyForm(Form):
+class MyForm(FlaskForm):
     submit = SubmitField('Refresh')
 
 

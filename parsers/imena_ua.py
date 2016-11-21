@@ -1,7 +1,7 @@
 from grab import Grab
+g = Grab()
 
 def imena_ua():
-    g = Grab()
     prices = {}
     g.go('http://www.imena.ua/site/domains/prices')
     index = ((x, y) for x in range(2, 11, 2) for y in range(1, 500))

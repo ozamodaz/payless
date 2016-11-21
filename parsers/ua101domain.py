@@ -1,11 +1,11 @@
 from grab import Grab
 import re
 log = []
+g = Grab()
 
 
 def ua101domain(all_domains):
     prices = {}
-    g = Grab()
 
     def error_handler(g):
         message = 'Unknown Error'
