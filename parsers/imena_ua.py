@@ -4,7 +4,7 @@ g = Grab()
 def imena_ua():
     prices = {}
     g.go('http://www.imena.ua/site/domains/prices')
-    index = ((x, y) for x in range(1, 5) for y in range(1, 500))
+    index = ((x, y) for x in range(1, 6) for y in range(1, 500))
     for table, row in index:
         try:
             tld_xpath = '/html/body/div[1]/section/div/table[%s]/tr[%s]/td[1]/a' % (table, row)
