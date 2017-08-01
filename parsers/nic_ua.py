@@ -8,11 +8,11 @@ def nic_ua():
     repl = (
            (',', '.'),  # swich separator for float() conversion
            ('\xa0', ''),  # remove space separating thousands
-           ('Безкоштовно', '0.0')
+           ('Безкоштовно', '0.0'),
+           ('—', '0.0')
            )
     for element in g.css_list('.domain-name'):
         tld = element.text_content()  # lower case without dot
-        # import ipdb; ipdb.set_trace()
         price = element.getparent().getparent().getnext().text_content()
         price = price.strip(' \xa0₴\n')
         for i in repl:
